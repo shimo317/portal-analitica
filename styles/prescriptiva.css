@@ -1,0 +1,432 @@
+/* ======= REGLAS COMPLEMENTARIAS ====== */
+h1, h2, h3, h4, h5, h6, .hero-title, .top-userbar {
+    color: #1D496D !important;
+}
+
+/* ======= FORZAR MODO CLARO CORPORATIVO ====== */
+html, body, [class*="css"], [data-testid="stAppViewContainer"], .stApp {
+    background: #F3FAFF !important;
+    background-color: #F3FAFF !important;
+    color: #1D496D !important;
+}
+
+/* =========================
+   OCULTAR UI STREAMLIT
+========================= */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* =========================
+   FONDO DARK PREMIUM
+========================= */
+.stApp{
+  background: #F3FAFF !important;
+  color: #1D496D;
+}
+
+.block-container{
+  max-width: 1200px;
+  padding-top: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero-wrap{
+  border-radius: 20px;
+  padding: 24px 26px;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(132, 182, 244, 0.22);
+  box-shadow: 0 18px 45px rgba(0, 81, 135, 0.08);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.hero-wrap:before{
+  content: "";
+  position: absolute;
+  inset: -120px -80px auto auto;
+  width: 380px;
+  height: 380px;
+  background: #F3FAFF !important;
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #005187 !important;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(132, 182, 244, 0.22);
+  background: #EAF3FF;
+  width: fit-content;
+  margin-bottom: 12px;
+}
+.pill-dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #4D82BC;
+  box-shadow: 0 0 0 3px rgba(132, 182, 244, 0.4);
+}
+
+.hero-title{
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin: 0;
+  line-height: 1.05;
+  color: #005187;
+}
+.accent{ color: #4D82BC; }
+
+.hero-sub{
+  margin-top: 10px;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #005187 !important;
+  max-width: 900px;
+}
+
+.sep{
+  margin: 12px 0 22px 0;
+  position: relative;
+  height: 18px;
+}
+.sep:before{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  top:9px;
+  height:1px;
+  background: rgba(132, 182, 244, 0.22);
+}
+.sep:after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:8px;
+  height:3px;
+  width:110px;
+  background: #4D82BC;
+  border-radius: 999px;
+  box-shadow: 0 10px 25px rgba(132, 182, 244, 0.4);
+}
+
+/* =========================
+   TITULOS
+========================= */
+.section-title{
+  font-size: 1.35rem;
+  font-weight: 900;
+  margin: 0 0 14px 0;
+  color: #005187;
+}
+
+/* =========================
+   PANEL (REQUISITOS)
+========================= */
+.panel{
+  background: #FFFFFF;
+  border: 1px solid rgba(132, 182, 244, 0.4);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 14px 34px rgba(0, 81, 135, 0.08);
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.panel:before{
+  content:"";
+  position:absolute;
+  inset:-90px -120px auto auto;
+  width:260px; height:260px;
+  background: #F3FAFF !important;
+  filter: blur(6px);
+  pointer-events:none;
+}
+.panel-title{
+  font-weight: 900;
+  margin-bottom: 6px;
+  color: #1D496D !important;
+}
+.panel code{
+  color:#07101D;
+  background:rgba(132, 182, 244, 0.4);
+  border-radius:999px;
+  padding:2px 8px;
+  font-weight:900;
+  font-size:.78rem;
+  border:1px solid rgba(132, 182, 244, 0.4);
+}
+.panel-icon{
+  width:44px;height:44px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(132, 182, 244, 0.4);
+  background: #EAF3FF;
+  color:#4D82BC;
+  font-size:1.2rem;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+section[data-testid="stSidebar"]{ 
+  background: #FFFFFF;
+  border-right: 1px solid rgba(132, 182, 244, 0.22);
+ 
+  background: linear-gradient(180deg, #EAF3FF 0%, #FCFFFF 100%) !important;
+}
+section[data-testid="stSidebar"] *{
+  color: #1D496D !important;
+}
+
+/* =========================
+   FILE UPLOADER
+========================= */
+[data-testid="stFileUploader"] section{
+  background: #F8FAFC !important;
+  border: 1px dashed rgba(132, 182, 244, 0.4) !important;
+  border-radius: 16px;
+}
+[data-testid="stFileUploader"] label,
+[data-testid="stFileUploader"] span,
+[data-testid="stFileUploader"] p,
+[data-testid="stFileUploader"] small{
+  color: #1D496D !important;
+  font-weight: 700;
+}
+[data-testid="stFileUploader"] svg{
+  fill:#4D82BC !important;
+}
+
+/* =========================
+   METRICS
+========================= */
+[data-testid="stMetricValue"]{
+  font-weight: 900;
+  color: #005187;
+}
+[data-testid="stMetricLabel"]{
+  color: #005187 !important;
+  font-weight: 800;
+}
+
+/* =========================
+   BOTONES (DESCARGA + UPLOADER)
+========================= */
+div.stDownloadButton > button{
+  border-radius:14px !important;
+  font-weight:900 !important;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  background: linear-gradient(135deg, #4D82BC 0%, #38BDF8 55%, #60A5FA 100%) !important;
+  color: #005187 !important;
+  border: none !important;
+  padding: 0.78rem 1rem !important;
+  box-shadow: 0 14px 30px rgba(132, 182, 244, 0.4);
+  transition: filter .15s ease, transform .15s ease;
+}
+div.stDownloadButton > button:hover{
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   DATAFRAME
+========================= */
+[data-testid="stDataFrame"]{
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid rgba(132, 182, 244, 0.22);
+}
+
+/* ===============================
+   INTERPRETACIÓN AUTOMÁTICA (CARD)
+=============================== */
+.interpret-card{
+  margin-top: 22px;
+  padding: 26px 28px;
+  border-radius: 22px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.03)
+  );
+
+  border: 1px solid rgba(132, 182, 244, 0.22);
+
+  box-shadow:
+    0 20px 55px rgba(0, 81, 135, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(12px);
+}
+
+.interpret-title{
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #E5E7EB;
+  margin-bottom: 14px;
+}
+
+.interpret-text{
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #005187 !important;
+}
+
+.interpret-note{
+  display: block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: rgba(203,213,225,0.75);
+}
+
+/* ===============================
+   INTERPRETACIÓN PRO - EXTRAS
+=============================== */
+.interpret-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom: 8px;
+}
+
+.interpret-exec{
+  margin: 10px 0 14px 0;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(2,6,23,0.35);
+  border: 1px solid rgba(132, 182, 244, 0.22);
+  color: #005187 !important;
+  font-size: 0.90rem;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  border: 1px solid rgba(132, 182, 244, 0.22);
+  background: rgba(2,6,23,0.30);
+}
+
+.badge-ok{
+  color: rgba(16,185,129,0.95);
+  border-color: rgba(16,185,129,0.35);
+}
+
+.badge-warn{
+  color: rgba(251,191,36,0.95);
+  border-color: rgba(251,191,36,0.35);
+}
+
+.interpret-bullets{
+  margin: 12px 0 14px 0;
+  padding-left: 18px;
+  color: #005187 !important;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.interpret-bullets li{
+  margin: 7px 0;
+}
+
+.interpret-tip{
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(34,211,238,0.08);
+  border: 1px solid rgba(132, 182, 244, 0.4);
+  color: #005187 !important;
+  font-size: 0.93rem;
+}
+
+.tip-label{
+  color: rgba(132, 182, 244, 0.4);
+  font-weight: 700;
+}
+
+/* =========================================================
+   ✅ NUEVO: WORD REPORT (CARD + BOTÓN RECTANGULAR)
+========================================================= */
+.word-card{
+  background: #FFFFFF;
+  border: 1px solid rgba(132, 182, 244, 0.22);
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 18px 45px rgba(0, 81, 135, 0.08);
+  backdrop-filter: blur(10px);
+  margin-top: 16px;
+}
+
+.word-title{
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: #1D496D !important;
+  margin: 0 0 6px 0;
+  letter-spacing: .2px;
+}
+
+.word-sub{
+  color: #005187 !important;
+  font-size: .85rem;
+  margin: 0 0 14px 0;
+}
+
+/* Botón Generar Word (st.button) igual a descarga: rectángulo ancho */
+div[data-testid="stButton"] > button{
+  width: 100% !important;
+  min-height: 52px !important;
+  border-radius: 14px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+
+  background: linear-gradient(135deg, #4D82BC 0%, #38BDF8 55%, #60A5FA 100%) !important;
+  color: #005187 !important;
+  border: none !important;
+
+  box-shadow: 0 14px 30px rgba(132, 182, 244, 0.4) !important;
+  transition: filter .15s ease, transform .15s ease !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  white-space: nowrap !important;
+}
+
+div[data-testid="stButton"] > button:hover{
+  filter: brightness(1.05) !important;
+  transform: translateY(-1px) !important;
+}
+
+div[data-testid="stButton"] > button span{
+  white-space: nowrap !important;
+}
+
+/* Responsive */
+@media (max-width: 700px){
+  div[data-testid="stButton"] > button,
+  div.stDownloadButton > button{
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,495 @@
+/* ======= REGLAS COMPLEMENTARIAS ====== */
+h1, h2, h3, h4, h5, h6, .hero-title, .top-userbar {
+    color: #1D496D !important;
+}
+
+/* ======= FORZAR MODO CLARO CORPORATIVO ====== */
+html, body, [class*="css"], [data-testid="stAppViewContainer"], .stApp {
+    background: #F3FAFF !important;
+    background-color: #F3FAFF !important;
+    color: #1D496D !important;
+}
+
+/* =========================
+   OCULTAR UI STREAMLIT
+========================= */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* =========================
+   FONDO DARK PREMIUM
+========================= */
+.stApp{
+  background: #F3FAFF !important;
+  color: #1D496D;
+}
+
+.block-container{
+  max-width: 1200px;
+  padding-top: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero-wrap{
+  border-radius: 20px;
+  padding: 24px 26px;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(132, 182, 244, 0.22);
+  box-shadow: 0 18px 45px rgba(0, 81, 135, 0.08);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.hero-wrap:before{
+  content: "";
+  position: absolute;
+  inset: -120px -80px auto auto;
+  width: 380px;
+  height: 380px;
+  background: #F3FAFF !important;
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #005187 !important;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(132, 182, 244, 0.22);
+  background: #EAF3FF;
+  width: fit-content;
+  margin-bottom: 12px;
+}
+.pill-dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #4D82BC;
+  box-shadow: 0 0 0 3px rgba(132, 182, 244, 0.4);
+}
+
+.hero-title{
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin: 0;
+  line-height: 1.05;
+  color: #005187;
+}
+.accent{ color: #4D82BC; }
+
+.hero-sub{
+  margin-top: 10px;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #005187 !important;
+  max-width: 900px;
+}
+
+.sep{
+  margin: 12px 0 22px 0;
+  position: relative;
+  height: 18px;
+}
+.sep:before{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  top:9px;
+  height:1px;
+  background: rgba(132, 182, 244, 0.22);
+}
+.sep:after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:8px;
+  height:3px;
+  width:110px;
+  background: #4D82BC;
+  border-radius: 999px;
+  box-shadow: 0 10px 25px rgba(132, 182, 244, 0.4);
+}
+
+/* =========================
+   TITULOS
+========================= */
+.section-title{
+  font-size: 1.35rem;
+  font-weight: 900;
+  margin: 0 0 14px 0;
+  color: #005187;
+}
+
+/* =========================
+   PANEL (REQUISITOS)
+========================= */
+.panel{
+  background: #FFFFFF;
+  border: 1px solid rgba(132, 182, 244, 0.4);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 14px 34px rgba(0, 81, 135, 0.08);
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.panel:before{
+  content:"";
+  position:absolute;
+  inset:-90px -120px auto auto;
+  width:260px; height:260px;
+  background: #F3FAFF !important;
+  filter: blur(6px);
+  pointer-events:none;
+}
+.panel-title{
+  font-weight: 900;
+  margin-bottom: 6px;
+  color: #1D496D !important;
+}
+.panel-icon{
+  width:44px;height:44px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(132, 182, 244, 0.4);
+  background: #EAF3FF;
+  color:#4D82BC;
+  font-size:1.2rem;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+section[data-testid="stSidebar"]{ 
+  background: #FFFFFF;
+  border-right: 1px solid rgba(132, 182, 244, 0.22);
+ 
+  background: linear-gradient(180deg, #EAF3FF 0%, #FCFFFF 100%) !important;
+}
+section[data-testid="stSidebar"] *{
+  color: #1D496D !important;
+}
+
+/* Inputs sidebar (bonitos) */
+section[data-testid="stSidebar"] .stNumberInput input{
+  background: rgba(21, 23, 2, 0.65);
+  border: 1px solid rgba(132, 182, 244, 0.22);
+  border-radius: 10px;
+  color: #005187;
+  font-weight: 800;
+}
+section[data-testid="stSidebar"] .stSlider{
+  margin-bottom: 10px;
+}
+section[data-testid="stSidebar"] h2{
+  font-size: 1.05rem;
+  font-weight: 900;
+  margin-top: 12px;
+}
+
+/* =========================
+   FILE UPLOADER
+========================= */
+[data-testid="stFileUploader"] section{
+  background: #F8FAFC !important;
+  border: 1px dashed rgba(132, 182, 244, 0.4) !important;
+  border-radius: 16px;
+}
+[data-testid="stFileUploader"] label,
+[data-testid="stFileUploader"] span,
+[data-testid="stFileUploader"] p,
+[data-testid="stFileUploader"] small{
+  color: #1D496D !important;
+  font-weight: 700;
+}
+[data-testid="stFileUploader"] svg{
+  fill:#4D82BC !important;
+}
+
+/* =========================
+   METRICS
+========================= */
+[data-testid="stMetricValue"]{
+  font-weight: 900;
+  color: #005187;
+}
+[data-testid="stMetricLabel"]{
+  color: #005187 !important;
+  font-weight: 800;
+}
+
+/* =========================
+   BOTONES
+========================= */
+div.stDownloadButton > button{
+  border-radius:14px !important;
+  font-weight:900 !important;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  background: linear-gradient(135deg, #4D82BC 0%, #38BDF8 55%, #60A5FA 100%) !important;
+  color: #005187 !important;
+  border: none !important;
+  padding: 0.78rem 1rem !important;
+  box-shadow: 0 14px 30px rgba(132, 182, 244, 0.4);
+  transition: filter .15s ease, transform .15s ease;
+}
+div.stDownloadButton > button:hover{
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   DATAFRAME
+========================= */
+[data-testid="stDataFrame"]{
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid rgba(132, 182, 244, 0.22);
+}
+
+/* =========================
+   SIDEBAR COMPACT (GUIA + CONFIG)
+========================= */
+.sidebar-help{ margin-bottom: 8px; }
+
+.sidebar-help h4{
+  margin: 0 0 6px 0;
+  font-size: .95rem;
+  font-weight: 900;
+  color: #005187 !important;
+}
+
+.sidebar-help ul{
+  margin: 0;
+  padding-left: 16px;
+  line-height: 1.35;
+  font-size: .86rem;
+  color: #005187 !important;
+}
+
+.sidebar-help li{ margin: 4px 0; }
+
+.sidebar-tip{
+  margin-top: 6px;
+  font-size: .78rem;
+  color: rgba(132, 182, 244, 0.22) !important;
+}
+
+.sidebar-sep{
+  height: 1px;
+  background: rgba(132, 182, 244, 0.22);
+  margin: 10px 0 8px 0;
+}
+
+.sidebar-title{
+  margin: 0 0 6px 0;
+  font-size: .95rem;
+  font-weight: 900;
+  color: #005187 !important;
+}
+
+/* =========================
+   INTERPRETACIÓN (PRO CARD)
+========================= */
+.interpret-card{
+  border-radius: 18px;
+  padding: 18px 18px;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(132, 182, 244, 0.22) !important;
+  box-shadow: 0 18px 45px rgba(0, 81, 135, 0.08) !important;
+  backdrop-filter: blur(10px);
+  margin-top: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.interpret-card:before{
+  content:"";
+  position:absolute;
+  inset:-120px -90px auto auto;
+  width:320px; height:320px;
+  background: #F3FAFF !important;
+  filter: blur(10px);
+  pointer-events:none;
+}
+
+.interpret-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.interpret-title{
+  font-size: 1.18rem;
+  font-weight: 900;
+  color: #005187 !important;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: .78rem;
+  letter-spacing: .4px;
+  border: 1px solid rgba(132, 182, 244, 0.22);
+  background: rgba(15,23,42,0.35);
+  color: #005187 !important;
+  white-space: nowrap;
+}
+
+.badge-ok{ border-color: rgba(34,197,94,.35) !important; color: rgba(34,197,94,.95) !important; }
+.badge-warn{ border-color: rgba(245,158,11,.35) !important; color: rgba(245,158,11,.95) !important; }
+.badge-bad{ border-color: rgba(239,68,68,.35) !important; color: rgba(104, 48, 48, 0.95) !important; }
+
+.interpret-exec{
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(2,6,23,.35);
+  border: 1px solid rgba(132, 182, 244, 0.22);
+  color: #005187 !important;
+  font-size: .92rem;
+  margin-bottom: 12px;
+}
+
+.interpret-text{
+  color: #005187 !important;
+  line-height: 1.45;
+  font-size: .95rem;
+  margin-bottom: 10px;
+}
+
+.interpret-bullets{
+  margin: 0 0 12px 0;
+  padding-left: 18px;
+  color: #005187 !important;
+}
+
+.interpret-bullets li{ margin: 8px 0; }
+
+.interpret-tip{
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(56, 191, 248, 0.125);
+  border: 1px solid rgba(56, 191, 248, 0.205);
+  color: #005187 !important;
+  margin-top: 8px;
+}
+
+.tip-label{
+  font-weight: 900;
+  color: rgba(132, 182, 244, 0.4) !important;
+}
+
+.interpret-note{
+  margin-top: 10px;
+  font-size: .86rem;
+  color: #005187 !important;
+}
+/* =========================
+   FIX: NumberInput visible en SIDEBAR
+   (Filas a previsualizar / cualquier number_input)
+========================= */
+section[data-testid="stSidebar"] [data-testid="stNumberInput"]{
+  margin-bottom: 10px;
+}
+
+section[data-testid="stSidebar"] [data-testid="stNumberInput"] input{
+  background: rgb(225, 238, 255) !important;
+  border: 1px solid rgba(132, 182, 244, 0.22) !important;
+  border-radius: 10px !important;
+  color: #1D496D !important;
+  font-weight: 900 !important;
+  caret-color: #4D82BC !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stNumberInput"] input::placeholder{
+  color: rgba(226,232,240,0.45) !important;
+}
+
+/* botones + y - */
+section[data-testid="stSidebar"] [data-testid="stNumberInput"] button{
+  background: rgba(189, 201, 255, 0.7) !important;
+  border: 1px solid rgba(132, 182, 244, 0.22) !important;
+  color: #1D496D !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stNumberInput"] button:hover{
+  border-color: rgba(181, 244, 132, 0.4) !important;
+  color: #F3FAFF !important;
+}
+
+/* a veces Streamlit mete el valor en un div interno */
+section[data-testid="stSidebar"] [data-testid="stNumberInput"] div{
+  color: #1D496D !important;
+}
+section[data-testid="stSidebar"] [data-testid="stNumberInput"] input{
+  -webkit-text-fill-color: #1D496D !important;
+}
+
+/* =========================================================
+   NUEVO: DESCARGA WORD (CARD + BOTÓN st.button como rectángulo)
+   - No afecta a st.download_button (CSV) porque es stButton
+========================================================= */
+
+/* Card del bloque */
+.word-card{
+  background: #FFFFFF !important;
+  border: 1px solid rgba(132, 182, 244, 0.22) !important;
+  border-radius: 18px !important;
+  padding: 16px 18px !important;
+  box-shadow: 0 18px 45px rgba(0, 81, 135, 0.08) !important;
+  backdrop-filter: blur(10px) !important;
+  margin-top: 14px !important;
+}
+
+.word-title{
+  font-weight: 900 !important;
+  font-size: 1.12rem !important;
+  color: #1D496D !important;
+  margin: 0 0 6px 0 !important;
+}
+
+.word-sub{
+  font-size: .86rem !important;
+  color: #005187 !important;
+  margin: 0 !important;
+}
+
+/* Botón generado por st.button (no es stDownloadButton) */
+div[data-testid="stButton"] > button{
+  width: 100% !important;              /* ✅ rectángulo ancho */
+  min-height: 54px !important;         /* ✅ alto pro */
+  border-radius: 14px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  background: linear-gradient(135deg, #4D82BC 0%, #38BDF8 55%, #60A5FA 100%) !important;
+  color: #005187 !important;
+  border: none !important;
+  padding: 0.85rem 1rem !important;
+  box-shadow: 0 14px 30px rgba(132, 182, 244, 0.4) !important;
+  transition: filter .15s ease, transform .15s ease !important;
+}
+
+div[data-testid="stButton"] > button:hover{
+  filter: brightness(1.05) !important;
+  transform: translateY(-1px) !important;
+}

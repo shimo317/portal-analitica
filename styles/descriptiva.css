@@ -1,0 +1,386 @@
+/* ======= FORZAR MODO CLARO CORPORATIVO ====== */
+html, body, [class*="css"], [data-testid="stAppViewContainer"], .stApp {
+    background: #F3FAFF !important;
+    background-color: #F3FAFF !important;
+    color: #1D496D !important;
+}
+
+h1, h2, h3, h4, h5, h6, .hero-title {
+    color: #005187 !important;
+}
+
+.top-userbar, .top-userbar *, .auth-user, .auth-user *, .auth-user b {
+    color: #005187 !important;
+}
+
+.auth-topbar {
+    background: #EAF3FF !important;
+    border: 1px solid rgba(132, 182, 244, 0.4) !important;
+}
+
+[data-testid="stMarkdownContainer"] p, [data-testid="stMarkdownContainer"] span, [data-testid="stMarkdownContainer"] div {
+    color: #1D496D;
+}
+
+.panel, .panel div, .panel span, .panel small, .panel b, .panel strong {
+    color: #1D496D !important;
+}
+
+.word-card *, .interpret-card * {
+    color: #1D496D;
+}
+
+button[kind="primary"] *, div.stDownloadButton button * {
+    color: inherit;
+}
+
+/* ================= HERO (Descriptiva) ================= */
+.hero-wrap{
+  border-radius: 20px;
+  padding: 24px 26px;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(132, 182, 244, 0.22) !important;
+  box-shadow: 0 18px 45px rgba(0, 81, 135, 0.08) !important;
+  backdrop-filter: blur(10px);
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.pill{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  font-size:.75rem;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  color: #005187 !important;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(132, 182, 244, 0.22) !important;
+  background: #EAF3FF !important;
+  margin-bottom:12px;
+}
+
+.pill-dot{
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  background:#4D82BC !important;
+  box-shadow:0 0 0 3px rgba(132, 182, 244, 0.4) !important;
+}
+
+.hero-title{
+  font-size:3rem;
+  font-weight:900;
+  margin:0;
+}
+
+.accent{ color:#4D82BC !important; }
+
+.hero-sub{
+  margin-top:10px;
+  color: #005187 !important;
+}
+
+.sep{
+  margin:12px 0 22px;
+  height:1px;
+  background:rgba(132, 182, 244, 0.22) !important;
+}
+
+/* ================= PANEL (Requisitos) ================= */
+.panel{
+  background: #FFFFFF !important;
+  border:1px solid rgba(132, 182, 244, 0.4) !important;
+  border-radius:18px !important;
+  padding:16px !important;
+  box-shadow:0 14px 34px rgba(0, 81, 135, 0.08) !important;
+  margin-bottom:18px !important;
+}
+
+.panel-title{
+  font-weight:900 !important;
+  margin-bottom:6px !important;
+  color: #005187 !important;
+}
+
+.panel small{
+  color: #005187 !important;
+}
+
+/* ✅ IMPORTANTE: Streamlit a veces sobreescribe code, aquí lo forzamos */
+.panel code{
+  color: #005187 !important;
+  background:rgba(132, 182, 244, 0.4) !important;
+  border-radius:999px !important;
+  padding:2px 10px !important;
+  font-weight:900 !important;
+  font-size:.78rem !important;
+  border: none !important;
+  box-shadow: 0 10px 25px rgba(132, 182, 244, 0.4) !important;
+}
+
+/* ================= SIDEBAR (Fix) ================= */
+section[data-testid="stSidebar"]{ 
+  background: #FFFFFF !important;
+  border-right:1px solid rgba(132, 182, 244, 0.22) !important;
+ 
+  background: linear-gradient(180deg, #EAF3FF 0%, #FCFFFF 100%) !important;
+}
+
+section[data-testid="stSidebar"] *{
+  color: #1D496D !important;
+}
+
+section[data-testid="stSidebar"] input{
+  color:#0F172A !important;
+  font-weight:700 !important;
+}
+
+/* Tags del multiselect */
+[data-baseweb="tag"]{
+  background:#1D496D !important;
+  color:white !important;
+  font-weight:800 !important;
+  border-radius:8px !important;
+}
+
+/* ================= FILE UPLOADER FIX ================= */
+[data-testid="stFileUploader"]{
+  color: #005187 !important;
+}
+
+[data-testid="stFileUploader"] section{
+  background: #F8FAFC !important;
+  border:1px dashed rgba(132, 182, 244, 0.4) !important;
+  border-radius:16px !important;
+}
+
+[data-testid="stFileUploader"] label,
+[data-testid="stFileUploader"] span,
+[data-testid="stFileUploader"] p,
+[data-testid="stFileUploader"] small{
+  color: #1D496D !important;
+  font-weight:700 !important;
+}
+
+[data-testid="stFileUploader"] svg{
+  fill:#4D82BC !important;
+}
+
+
+/* ================= METRICS ================= */
+[data-testid="stMetricValue"]{
+  font-weight:900 !important;
+  color: #005187 !important;
+}
+
+[data-testid="stMetricLabel"]{
+  color: #005187 !important;
+  font-weight:800 !important;
+}
+
+/* ================= ALERTS (st.info / st.warning / st.error) ================= */
+/* Para que el “Sube un CSV…” se vea como tu diseño anterior */
+[data-testid="stAlert"]{
+  border-radius: 16px !important;
+  border: 1px solid rgba(132, 182, 244, 0.22) !important;
+  background: rgba(2,6,23,0.35) !important;
+  color: #005187 !important;
+}
+[data-testid="stAlert"] *{
+  color: #005187 !important;
+}
+
+/* ================= BUTTONS (Descargas) ================= */
+div.stDownloadButton > button{
+  border-radius:14px !important;
+  font-weight:900 !important;
+  text-transform:uppercase !important;
+  letter-spacing:1px !important;
+  background: #004578 !important;
+  color: #FFFFFF !important; border:none !important;
+}
+
+/* =========================================================
+   NUEVO: INSIGHTS + TABLAS PRO (cards + tablas dark HTML)
+========================================================= */
+
+/* ====== INSIGHTS (cards) ====== */
+.insights-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+
+.insight-card{
+  background: #FFFFFF;
+  border: 1px solid rgba(132, 182, 244, 0.22);
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 14px 30px rgba(132, 182, 244, 0.22); /* sombra gris */
+  backdrop-filter: blur(8px);
+}
+
+.insight-title{
+  font-weight: 900;
+  letter-spacing: .4px;
+  font-size: 1.05rem;
+  color: #1D496D !important;
+  margin: 0 0 8px 0;
+}
+
+.insight-text{
+  margin: 0;
+  font-size: 1rem;       /* más grande */
+  line-height: 1.6;
+  color: #005187 !important;
+  text-align: justify;   /* justificado */
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .insights-grid{ grid-template-columns: 1fr; }
+}
+
+/* ====== TABLAS (HTML styled) ====== */
+.table-wrap{
+  background: #FFFFFF;
+  border: 1px solid rgba(132, 182, 244, 0.22);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 14px 30px rgba(0, 81, 135, 0.08);
+  overflow-x: auto;
+}
+
+.table-wrap table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table-wrap thead th{
+  background: #EAF3FF;
+  color: #1D496D !important;
+  font-weight: 900;
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(132, 182, 244, 0.22);
+}
+
+.table-wrap tbody td{
+  color: #005187 !important;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(132, 182, 244, 0.22);
+}
+
+.table-wrap tbody tr:nth-child(even){
+  background: rgba(0, 81, 135, 0.04);
+}
+.table-wrap tbody tr:nth-child(odd){
+  background: transparent;
+}
+
+/* =========================================================
+   NUEVO: WORD DOWNLOAD (CARD + BOTÓN GENERAR)
+========================================================= */
+
+/* Card contenedora para el bloque Word */
+.word-card{
+  background: #FFFFFF;
+  border: 1px solid rgba(132, 182, 244, 0.22);
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 18px 45px rgba(0, 81, 135, 0.08);
+  backdrop-filter: blur(10px);
+  margin-top: 16px;
+}
+
+.word-title{
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: #1D496D !important;
+  margin: 0 0 6px 0;
+  letter-spacing: .2px;
+}
+
+.word-sub{
+  color: #005187 !important;
+  font-size: .85rem;
+  margin: 0 0 14px 0;
+}
+
+/* Botón Generar Word (st.button) y botones secundarios con look igual a descargas */
+div[data-testid="stButton"] > button{
+  border-radius:14px !important;
+  font-weight:900 !important;
+  text-transform:uppercase !important;
+  letter-spacing:1px !important;
+  background: #004578 !important;
+  color: #FFFFFF !important; border:none !important;
+}
+
+div[data-testid="stButton"] > button * {
+  color: #FFFFFF !important;
+}
+
+/* Responsive: botones a ancho completo en móvil */
+@media (max-width: 700px){
+  div[data-testid="stButton"] > button,
+  div.stDownloadButton > button{
+    width: 100% !important;
+  }
+}
+ /* ================= FIX: BOTÓN GENERAR WORD ================= */
+
+/* Forzar botón Generar Word como rectángulo ancho */
+div[data-testid="stButton"] > button{
+  width: 100% !important;              /* ancho completo */
+  min-height: 52px !important;         /* alto tipo botón descarga */
+  border-radius: 14px !important;      /* rectangular suave */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;      /* evita que se rompa el texto */
+}
+
+/* Evita que el texto se vaya en vertical */
+div[data-testid="stButton"] > button span{
+  white-space: nowrap !important;
+}
+
+/* ======================================
+   DATAFRAME LIGHT MODE
+====================================== */
+
+[data-testid="stDataFrame"] {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(132,182,244,0.22) !important;
+    border-radius: 16px !important;
+}
+
+/* Header */
+[data-testid="stDataFrame"] thead th {
+    background: #EAF3FF !important;
+    color: #1D496D !important;
+    font-weight: 900 !important;
+}
+
+/* Celdas */
+[data-testid="stDataFrame"] tbody td {
+    background: #FFFFFF !important;
+    color: #005187 !important;
+    border-color: rgba(132,182,244,0.18) !important;
+}
+
+/* Filas alternadas */
+[data-testid="stDataFrame"] tbody tr:nth-child(even) td {
+    background: rgba(0,81,135,0.04) !important;
+}
+
+/* Scroll area */
+[data-testid="stDataFrame"] div {
+    color: #005187 !important;
+}

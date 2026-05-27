@@ -1,0 +1,520 @@
+:root {
+  /* Colores base */
+  --bg-0: #0B1220;
+  --bg-1: #0F1B2D;
+
+  /* Acento único del portal (cámbialo aquí y cambia TODO) */
+  --accent: #22D3EE;
+  --accent-2: #38BDF8;
+  --accent-3: #60A5FA;
+
+  /* Texto */
+  --text: rgba(255, 255, 255, 0.96);
+  --muted: rgba(226, 232, 240, 0.82);
+
+  /* Bordes / superficies */
+  --border: rgba(148, 163, 184, 0.22);
+  --surface-1: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+  --surface-2: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.03));
+
+  /* Sombras */
+  --shadow-1: 0 18px 45px rgba(0, 0, 0, 0.35);
+  --shadow-2: 0 14px 34px rgba(0, 0, 0, 0.35);
+
+  /* Botones */
+  --btn-grad: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 55%, var(--accent-3) 100%);
+}
+
+/* ======================================
+   OCULTAR UI DEFAULT STREAMLIT
+====================================== */
+#MainMenu {
+  visibility: hidden;
+}
+
+footer {
+  visibility: hidden;
+}
+
+header {
+  visibility: hidden;
+}
+
+/* ======================================
+   FONDO GENERAL
+====================================== */
+.stApp {
+  background: radial-gradient(1200px 700px at 15% -10%, rgba(34, 211, 238, 0.18) 0%, rgba(15, 23, 42, 0) 55%),
+    radial-gradient(900px 550px at 85% 0%, rgba(56, 189, 248, 0.10) 0%, rgba(15, 23, 42, 0) 60%),
+    linear-gradient(180deg, #0B1220 0%, #0F1B2D 100%);
+  color: #FFFFFF;
+}
+
+/* ======================================
+   CONTENEDOR PRINCIPAL
+====================================== */
+.block-container {
+  max-width: 1200px;
+  padding-top: 1.3rem;
+  padding-bottom: 2.0rem;
+}
+
+/* ======================================
+   SIDEBAR (ESTILO)
+====================================== */
+section[data-testid="stSidebar"] {
+background: #EAF3FF !important;
+border: 1px solid rgba(132,182,244,0.25) !important;
+color: #005187 !important;
+  border-right: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+section[data-testid="stSidebar"] * {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-weight: 600;
+}
+
+/* ======================================
+   HERO
+====================================== */
+.hero-wrap {
+  border-radius: 20px;
+  padding: 24px 26px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.hero-wrap:before {
+  content: "";
+  position: absolute;
+  inset: -120px -80px auto auto;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.25) 0%, rgba(34, 211, 238, 0) 65%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.85);
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(2, 6, 23, 0.25);
+  width: fit-content;
+  margin-bottom: 12px;
+}
+
+.pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #22D3EE;
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15);
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin: 0;
+  line-height: 1.05;
+}
+
+.hero-title .accent {
+  color: #22D3EE;
+}
+
+.hero-sub {
+  margin-top: 10px;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: rgba(226, 232, 240, 0.78);
+  max-width: 900px;
+}
+
+/* ======================================
+   SEPARADOR
+====================================== */
+.sep {
+  margin: 12px 0 22px 0;
+  position: relative;
+  height: 18px;
+}
+
+.sep:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 9px;
+  height: 1px;
+  background: rgba(148, 163, 184, 0.25);
+}
+
+.sep:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  height: 3px;
+  width: 110px;
+  background: #22D3EE;
+  border-radius: 999px;
+  box-shadow: 0 10px 25px rgba(34, 211, 238, 0.18);
+}
+
+/* ======================================
+   TITULOS DE SECCION
+====================================== */
+.section-title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  margin: 0 0 14px 0;
+}
+
+/* ======================================
+   TARJETAS DE MÓDULOS
+====================================== */
+.module-card {
+  background: linear-gradient(180deg, rgba(42, 47, 58, 0.85) 0%, rgba(30, 41, 59, 0.72) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  transition: transform .18s ease, border .18s ease, box-shadow .18s ease;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.module-card:hover {
+  transform: translateY(-4px);
+  border: 1px solid rgba(34, 211, 238, 0.55);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.44);
+}
+
+.module-card:before {
+  content: "";
+  position: absolute;
+  inset: -90px -120px auto auto;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.18) 0%, rgba(34, 211, 238, 0) 62%);
+  filter: blur(6px);
+}
+
+.icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  background: rgba(2, 6, 23, 0.25);
+  color: #22D3EE;
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+}
+
+.module-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.module-card p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  color: rgba(226, 232, 240, 0.78);
+  min-height: 52px;
+}
+
+.filehint {
+  margin-top: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  color: rgba(148, 163, 184, 0.85);
+}
+
+/* ======================================
+   BOTÓN ACCEDER (st.page_link)
+====================================== */
+div.stPageLink>a {
+  width: 100%;
+  border-radius: 14px !important;
+  padding: 0.78rem 1rem !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #22D3EE 0%, #38BDF8 55%, #60A5FA 100%) !important;
+  color: #07101D !important;
+  border: none !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  display: block !important;
+  margin-top: -6px;
+  box-shadow: 0 14px 30px rgba(34, 211, 238, 0.18);
+  transition: filter .15s ease, transform .15s ease;
+}
+
+div.stPageLink>a:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* ======================================
+   BOTÓN SECUNDARIO (Generales)
+====================================== */
+button[kind="secondary"] {
+  background: rgba(2, 6, 23, 0.85) !important;
+  border: 1px solid rgba(148, 163, 184, 0.35) !important;
+  color: #22D3EE !important;
+  font-weight: 900 !important;
+  border-radius: 12px !important;
+  height: auto !important;
+  width: auto !important;
+  padding: 10px 16px !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition: all .15s ease-in-out;
+}
+
+/* Forzar que el botón nativo de colapsar sidebar mantenga su tamaño cuadrado */
+[data-testid="collapsedControl"] button {
+  height: 42px !important;
+  width: 42px !important;
+  padding: 0 !important;
+}
+
+button[kind="secondary"]:hover {
+  background: rgba(8, 88, 140, 1) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.45);
+}
+
+/* ======================================
+   AJUSTES GENERALES
+====================================== */
+[data-testid="stHorizontalBlock"] {
+  gap: 1.2rem;
+}
+
+/* =========================================================
+   BOTÓN NATIVO DEL SIDEBAR (Streamlit) -> discreto gris
+   - Sin azul, sin glow, sin “hover cantoso”
+   - Solo afecta el botón dentro del sidebar (no tus botones)
+========================================================= */
+
+/* El control nativo vive dentro del sidebar, arriba */
+[data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] button,
+[data-testid="stSidebar"] button[title],
+[data-testid="stSidebar"] button:has(svg) {
+  background: rgba(8, 88, 140, 1) !important;
+  border: 1px solid rgba(8, 88, 140, 1) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+
+  color: rgba(8, 88, 140, 1) !important;
+  -webkit-text-fill-color: rgba(8, 88, 140, 1) !important;
+
+  outline: none !important;
+}
+
+/* Hover/Foco: solo un poquito más claro, SIN azul */
+[data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] button:hover,
+[data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] button:focus,
+[data-testid="stSidebar"] button[title]:hover,
+[data-testid="stSidebar"] button[title]:focus {
+  background: rgba(8, 88, 140, 1) !important;
+  border-color: rgba(8, 88, 140, 1) !important;
+
+  color: rgba(27, 27, 27, 0.85) !important;
+  -webkit-text-fill-color: rgba(13, 13, 14, 0.85) !important;
+}
+
+/* Icono siempre del mismo color */
+[data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] button svg,
+[data-testid="stSidebar"] button[title] svg {
+  fill: currentColor !important;
+  color: inherit !important;
+}
+
+/* Quita cualquier overlay raro */
+[data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] button::before,
+[data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] button::after {
+  background: transparent !important;
+}
+
+
+/* =========================================================
+   FIX (OPCIÓN A): File uploader "Browse files" + Download
+   - Evita que hereden el estilo del toggle (42x42 / fondo)
+   - Hace legible y consistente con tu tema premium
+========================================================= */
+
+/* ---------- FILE UPLOADER (Browse files) ---------- */
+div[data-testid="stFileUploader"] button,
+div.stFileUploader button {
+  width: auto !important;
+  height: auto !important;
+  padding: 10px 18px !important;
+
+  border-radius: 14px !important;
+  border: none !important;
+  background: #004578 !important;
+  color: #FFFFFF !important;
+
+  font-size: 0.95rem !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+
+  box-shadow: 0 10px 25px rgba(0, 81, 135, 0.25) !important;
+  transition: filter .15s ease, transform .15s ease !important;
+}
+
+div[data-testid="stFileUploader"] button:hover,
+div.stFileUploader button:hover {
+  filter: brightness(1.15) !important;
+  transform: translateY(-1px) !important;
+}
+
+div[data-testid="stFileUploader"] button *,
+div.stFileUploader button * {
+  color: #FFFFFF !important;
+}
+
+/* Textos del uploader (Drag and drop..., Limit..., etc.) */
+div[data-testid="stFileUploader"] * {
+  color: #1D496D !important;
+}
+
+/* ---------- DOWNLOAD BUTTON (Descargar reporte) ---------- */
+div[data-testid="stDownloadButton"] button {
+  width: auto !important;
+  height: auto !important;
+  padding: 10px 16px !important;
+
+  border-radius: 12px !important;
+  border: 1px solid rgba(34, 211, 238, 0.55) !important;
+  background: linear-gradient(180deg, rgba(34, 211, 238, 0.22), rgba(34, 211, 238, 0.10)) !important;
+
+  color: rgba(226, 232, 240, 0.98) !important;
+  font-size: 0.95rem !important;
+  font-weight: 900 !important;
+  letter-spacing: .4px;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28) !important;
+  transition: filter .15s ease, transform .15s ease, border-color .15s ease;
+}
+
+div[data-testid="stDownloadButton"] button:hover {
+  border-color: rgba(34, 211, 238, 0.95) !important;
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* Evita márgenes raros internos del label */
+div[data-testid="stDownloadButton"] button p {
+  margin: 0 !important;
+}
+
+/* =========================
+   Panel (usado por módulos)
+   ========================= */
+.panel {
+  margin-top: 14px;
+  border-radius: 18px;
+  padding: 16px 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.panel-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.panel-title {
+  font-weight: 900;
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+}
+
+/* Icono con el MISMO acento global */
+.panel-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(34, 211, 238, .35);
+  background: rgba(2, 6, 23, .25);
+  color: #22D3EE;
+}
+
+/* =========================
+   DOWNLOAD BUTTON (mismo look que Calidad)
+========================= */
+div.stDownloadButton {
+  width: 100% !important;
+}
+
+div.stDownloadButton>button {
+  /* mismo look pill */
+  border-radius: 16px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+
+  background: linear-gradient(135deg, #22D3EE 0%, #38BDF8 55%, #60A5FA 100%) !important;
+  color: #07101D !important;
+  border: none !important;
+
+  /* tamaño igual al de Calidad */
+  padding: 0.95rem 1.2rem !important;
+
+  /* importante: NO full width, centrado tipo Calidad */
+  width: auto !important;
+  min-width: 520px !important;
+  max-width: 720px !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+
+  box-shadow: 0 14px 30px rgba(34, 211, 238, 0.18) !important;
+  transition: filter .15s ease, transform .15s ease;
+}
+
+/* centra el botón */
+div.stDownloadButton {
+  display: flex !important;
+  justify-content: flex-start !important;
+  /* si lo quieres alineado a la izquierda como tu screenshot */
+}
+
+/* hover */
+div.stDownloadButton>button:hover {
+  filter: brightness(1.05) !important;
+  transform: translateY(-1px) !important;
+}

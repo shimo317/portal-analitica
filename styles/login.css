@@ -1,0 +1,267 @@
+html, body, [data-testid="stAppViewContainer"]{
+    background: linear-gradient(
+        135deg,
+        #F3FAFF 0%,
+        #EAF3FF 50%,
+        #D6E8FF 100%
+    );
+    min-height: 100vh;
+}
+
+[data-testid="stHeader"]{
+    background: transparent;
+}
+
+section[data-testid="stSidebar"]{
+    display: none !important;
+}
+
+.main .block-container{
+    max-width: 100% !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* ===== HEADER ===== */
+.login-page-header{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-small-title{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    color: #4D82BC;
+    margin-bottom: 18px;
+}
+
+.login-main-title{
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.05;
+    color: #005187;
+    margin-bottom: 14px;
+}
+
+.login-main-subtitle{
+    font-size: 16px;
+    color: #5A7FA5;
+}
+
+/* ===== CONTENEDOR GENERAL ===== */
+.login-shell{
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto 28px auto;
+}
+
+/* ===== RECUADRO REAL DETRÁS DEL FORMULARIO ===== */
+div[data-testid="stForm"]{
+    width: 100% !important;
+    max-width: 620px !important;
+    margin: 0 auto !important;
+    padding: 34px 34px 26px 34px !important;
+    border-radius: 20px !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 81, 135, 0.08) !important;
+    box-shadow: 0 15px 35px rgba(0, 81, 135, 0.08) !important;
+}
+
+/* quita bordes internos raros del form */
+div[data-testid="stForm"] > div{
+    border: none !important;
+    background: transparent !important;
+}
+
+/* fallback por si el form viene en otro wrapper */
+form{
+    background: transparent !important;
+}
+
+/* ===== LABELS ===== */
+.stTextInput label{
+    color: #1D496D !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+}
+
+/* ===== INPUTS ===== */
+.stTextInput [data-baseweb="input"]{
+    background: #F8FAFC !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 12px !important;
+    transition: all 0.2s ease !important;
+    overflow: hidden !important;
+}
+
+.stTextInput [data-baseweb="input"]:focus-within {
+    border: 1px solid #005187 !important;
+    background: #FFFFFF !important;
+    box-shadow: 0 0 0 1px #005187 !important;
+}
+
+.stTextInput input{
+    background: transparent !important;
+    color: #0F1B2D !important;
+    min-height: 50px !important;
+    padding: 12px 16px !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.stTextInput input::placeholder{
+    color: #94A3B8 !important;
+    opacity: 1 !important;
+}
+
+.stTextInput input:focus{
+    border: none !important;
+}
+
+/* ===== PASSWORD INPUT / BOTÓN OJO ===== */
+[data-testid="stTextInputRootElement"]{
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+[data-testid="stTextInputRootElement"] > div{
+    background: transparent !important;
+    border-radius: 12px !important;
+}
+
+[data-testid="stTextInputRootElement"] button{
+    background: transparent !important;
+    color: #64748B !important;
+    border: none !important;
+    border-radius: 0 12px 12px 0 !important;
+}
+
+[data-testid="stTextInputRootElement"] button:hover{
+    background: rgba(0, 81, 135, 0.05) !important;
+    color: #005187 !important;
+}
+
+/* ===== CHECKBOX ===== */
+.stCheckbox label,
+.stCheckbox label p,
+.stCheckbox div[data-testid="stMarkdownContainer"] p {
+    color: #476E95 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.stCheckbox input,
+.stCheckbox [role="checkbox"]{
+    accent-color: #005187 !important;
+}
+
+/* ===== BOTONES PRIMARIOS (Cambiar Contraseña, Iniciar sesión) ===== */
+div.stButton > button[kind="primaryFormData"],
+div.stButton > button[kind="primaryFormSubmit"],
+div.stButton > button[kind="primary"],
+div[data-testid="stFormSubmitButton"] > button[kind="primaryFormData"],
+div[data-testid="stFormSubmitButton"] > button[kind="primaryFormSubmit"],
+div[data-testid="stFormSubmitButton"] > button[kind="primary"] {
+    width: 100% !important;
+    min-width: unset !important;
+    min-height: 50px !important;
+    border-radius: 12px !important;
+    border: none !important;
+    background: #004578 !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    line-height: normal !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 18px !important;
+    box-shadow: 0 8px 24px rgba(0, 69, 120, 0.28) !important;
+    transition: all .25s ease !important;
+}
+
+div.stButton > button[kind="primaryFormData"]:hover,
+div.stButton > button[kind="primaryFormSubmit"]:hover,
+div.stButton > button[kind="primary"]:hover,
+div[data-testid="stFormSubmitButton"] > button:hover {
+    background: #002244 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 69, 120, 0.38) !important;
+}
+
+/* ===== BOTONES SECUNDARIOS (Cancelar) ===== */
+div.stButton > button[kind="secondaryFormData"],
+div.stButton > button[kind="secondaryFormSubmit"],
+div.stButton > button[kind="secondary"],
+div[data-testid="stFormSubmitButton"] > button[kind="secondaryFormData"],
+div[data-testid="stFormSubmitButton"] > button[kind="secondaryFormSubmit"],
+div[data-testid="stFormSubmitButton"] > button[kind="secondary"] {
+    width: 100% !important;
+    min-width: unset !important;
+    min-height: 50px !important;
+    border-radius: 12px !important;
+    border: 1px solid #004578 !important;
+    background: #004578 !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: normal !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 18px !important;
+    box-shadow: 0 4px 10px rgba(0, 69, 120, 0.25) !important;
+    transition: all .25s ease !important;
+}
+
+div.stButton > button[kind="secondaryFormData"]:hover,
+div.stButton > button[kind="secondaryFormSubmit"]:hover,
+div.stButton > button[kind="secondary"]:hover {
+    background: #002244 !important;
+    border-color: #002244 !important;
+    color: #FFFFFF !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 69, 120, 0.35) !important;
+}
+
+/* ===== ALERTAS ===== */
+[data-testid="stAlert"]{
+    border-radius: 14px !important;
+}
+
+/* ===== DIVISOR ===== */
+.login-divider{
+    height: 1px;
+    margin: 18px 0 16px 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(132, 182, 244, 0.40),
+        transparent
+    );
+}
+
+/* ===== TEXTOS ===== */
+.mini-section-title{
+    color: #005187;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 4px;
+}
+
+.login-footer-note{
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #5A7FA5;
+    text-align: center;
+}
