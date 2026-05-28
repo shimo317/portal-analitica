@@ -217,6 +217,20 @@ section[data-testid="stSidebar"] h2{
   fill:#4D82BC !important;
 }
 
+/* Chip completo del archivo cargado */
+[data-testid="stFileChip"]{
+    background-color: #EAF3FF !important;
+    border: 1px solid #84B6F4 !important;
+}
+
+/* Nombre del archivo */
+[data-testid="stFileChipName"]{
+    color: #005187 !important;
+    font-size: 13px !important;
+    font-weight: 900 !important;
+    opacity: 1 !important;
+}
+
 /* =========================
    METRICS
 ========================= */
@@ -299,6 +313,8 @@ div.stDownloadButton > button:hover{
   color: #005187 !important;
 }
 
+
+
 /* =========================
    INTERPRETACIÓN (PRO CARD)
 ========================= */
@@ -360,7 +376,7 @@ div.stDownloadButton > button:hover{
 .interpret-exec{
   padding: 12px 14px;
   border-radius: 12px;
-  background: rgba(2,6,23,.35);
+  background: rgba(171, 180, 221, 0.35);
   border: 1px solid rgba(132, 182, 244, 0.22);
   color: #005187 !important;
   font-size: .92rem;
@@ -393,7 +409,7 @@ div.stDownloadButton > button:hover{
 
 .tip-label{
   font-weight: 900;
-  color: rgba(132, 182, 244, 0.4) !important;
+  color: rgba(54, 76, 102, 0.4) !important;
 }
 
 .interpret-note{

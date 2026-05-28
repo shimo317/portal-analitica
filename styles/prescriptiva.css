@@ -209,6 +209,20 @@ section[data-testid="stSidebar"] *{
   fill:#4D82BC !important;
 }
 
+/* Chip completo del archivo cargado */
+[data-testid="stFileChip"]{
+    background-color: #EAF3FF !important;
+    border: 1px solid #84B6F4 !important;
+}
+
+/* Nombre del archivo */
+[data-testid="stFileChipName"]{
+    color: #005187 !important;
+    font-size: 13px !important;
+    font-weight: 900 !important;
+    opacity: 1 !important;
+}
+
 /* =========================
    METRICS
 ========================= */
@@ -276,7 +290,7 @@ div.stDownloadButton > button:hover{
 .interpret-title{
   font-size: 1.35rem;
   font-weight: 700;
-  color: #E5E7EB;
+  color: #556992;
   margin-bottom: 14px;
 }
 
@@ -290,7 +304,7 @@ div.stDownloadButton > button:hover{
   display: block;
   margin-top: 8px;
   font-size: 0.85rem;
-  color: rgba(203,213,225,0.75);
+  color: rgba(0, 69, 153, 0.75);
 }
 
 /* ===============================
@@ -308,7 +322,7 @@ div.stDownloadButton > button:hover{
   margin: 10px 0 14px 0;
   padding: 10px 12px;
   border-radius: 14px;
-  background: rgba(2,6,23,0.35);
+  background: rgba(117, 130, 187, 0.35);
   border: 1px solid rgba(132, 182, 244, 0.22);
   color: #005187 !important;
   font-size: 0.90rem;
@@ -324,7 +338,7 @@ div.stDownloadButton > button:hover{
   font-weight: 700;
   letter-spacing: .5px;
   border: 1px solid rgba(132, 182, 244, 0.22);
-  background: rgba(2,6,23,0.30);
+  background: rgb(2, 6, 23);
 }
 
 .badge-ok{
@@ -360,7 +374,7 @@ div.stDownloadButton > button:hover{
 }
 
 .tip-label{
-  color: rgba(132, 182, 244, 0.4);
+  color: rgba(132, 182, 244, 0.862);
   font-weight: 700;
 }
 

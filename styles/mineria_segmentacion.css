@@ -316,6 +316,19 @@ div[data-testid="stFileUploader"] > section{
   fill: #4D82BC !important;
 }
 
+/* Chip completo del archivo cargado */
+[data-testid="stFileChip"]{
+    background-color: #EAF3FF !important;
+    border: 1px solid #84B6F4 !important;
+}
+
+/* Nombre del archivo */
+[data-testid="stFileChipName"]{
+    color: #005187 !important;
+    font-size: 13px !important;
+    font-weight: 900 !important;
+    opacity: 1 !important;
+}
 
 /* =========================
    DOWNLOAD BUTTON (OBSERVACIÓN APLICADA)

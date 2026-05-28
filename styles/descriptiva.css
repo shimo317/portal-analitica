@@ -133,13 +133,13 @@ section[data-testid="stSidebar"] *{
 }
 
 section[data-testid="stSidebar"] input{
-  color:#0F172A !important;
+  color:#6a96fc !important;
   font-weight:700 !important;
 }
 
 /* Tags del multiselect */
 [data-baseweb="tag"]{
-  background:#1D496D !important;
+  background:#a9d7fd !important;
   color:white !important;
   font-weight:800 !important;
   border-radius:8px !important;
@@ -160,12 +160,26 @@ section[data-testid="stSidebar"] input{
 [data-testid="stFileUploader"] span,
 [data-testid="stFileUploader"] p,
 [data-testid="stFileUploader"] small{
-  color: #1D496D !important;
-  font-weight:700 !important;
+  color: #a4cdef !important;
+  font-weight:800 !important;
 }
 
 [data-testid="stFileUploader"] svg{
   fill:#4D82BC !important;
+}
+
+/* Chip completo del archivo cargado */
+[data-testid="stFileChip"]{
+    background-color: #EAF3FF !important;
+    border: 1px solid #84B6F4 !important;
+}
+
+/* Nombre del archivo */
+[data-testid="stFileChipName"]{
+    color: #005187 !important;
+    font-size: 13px !important;
+    font-weight: 900 !important;
+    opacity: 1 !important;
 }
 
 
@@ -185,7 +199,7 @@ section[data-testid="stSidebar"] input{
 [data-testid="stAlert"]{
   border-radius: 16px !important;
   border: 1px solid rgba(132, 182, 244, 0.22) !important;
-  background: rgba(2,6,23,0.35) !important;
+  background: rgba(166, 175, 217, 0.35) !important;
   color: #005187 !important;
 }
 [data-testid="stAlert"] *{

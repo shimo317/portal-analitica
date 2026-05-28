@@ -288,6 +288,10 @@ st.markdown(
                     <code>fecha</code>, <code>monto</code>
                     &nbsp;&nbsp;|&nbsp;&nbsp;
                     <b>Opcionales:</b> <code>categoria</code>
+                    <br>
+                    <b>Histórico mínimo:</b>
+                    2 meses distintos de información para generar predicciones
+                    <br>
                 </small>
             </div>
         </div>
