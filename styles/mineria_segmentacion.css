@@ -123,7 +123,7 @@ section[data-testid="stSidebar"] [data-testid="stMultiSelect"] div{
 
 /* Caja de selección */
 section[data-testid="stSidebar"] [data-baseweb="select"] > div{
-  background: rgba(2,6,23,0.65) !important;
+  background: rgba(188, 201, 255, 0.851) !important;
   border: 1px solid rgba(132, 182, 244, 0.22) !important;
   border-radius: 12px !important;
   box-shadow: none !important;
