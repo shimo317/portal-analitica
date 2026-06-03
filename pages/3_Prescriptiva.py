@@ -114,14 +114,14 @@ def money(x):
 def style_dark_matplotlib(ax):
     ax.set_facecolor((0, 0, 0, 0))
     ax.figure.set_facecolor((0, 0, 0, 0))
-    ax.tick_params(colors="white")
-    ax.xaxis.label.set_color("white")
-    ax.yaxis.label.set_color("white")
-    ax.title.set_color("white")
+    ax.tick_params(colors="#1D496D")
+    ax.xaxis.label.set_color("#1D496D")
+    ax.yaxis.label.set_color("#1D496D")
+    ax.title.set_color("#1D496D")
     ax.grid(True, alpha=0.18)
     for spine in ax.spines.values():
         spine.set_alpha(0.25)
-        spine.set_color("white")
+        spine.set_color("#1D496D")
 
 def build_prescriptive_explain(total_actual, presupuesto, exceso, df_plan, scenario_name):
     # df_plan: categoria, gasto_mensual, porcentaje_total, reducir_sugerido, objetivo_recomendado, prioridad, accion
