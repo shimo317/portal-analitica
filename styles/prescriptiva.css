@@ -444,3 +444,15 @@ div[data-testid="stButton"] > button span{
     width: 100% !important;
   }
 }
+
+/* ================= ALERTS (st.info / st.warning / st.error) ================= */
+/* Para que el “Sube un CSV…” se vea como tu diseño anterior */
+[data-testid="stAlert"]{
+  border-radius: 16px !important;
+  border: 1px solid rgba(132, 182, 244, 0.22) !important;
+  background: rgba(166, 175, 217, 0.35) !important;
+  color: #005187 !important;
+}
+[data-testid="stAlert"] *{
+  color: #005187 !important;
+}
